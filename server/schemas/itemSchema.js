@@ -4,7 +4,6 @@ const typeDefs = gql`
   type Item {
     id: ID!
     name: String!
-    description: String
     price: Float!
   }
 
@@ -22,7 +21,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addItem(name: String!, description: String, price: Float!): Item
+    addItem(name: String!, price: Float!): Item
     addUser(name: String!, email: String!, age: Int, password: String!): User
   }
 `;

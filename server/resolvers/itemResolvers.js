@@ -7,8 +7,8 @@ const resolvers = {
     },
   },
   Mutation: {
-    addItem: async (_, { name }) => {
-      const item = new Item({ name });
+    addItem: async (_, { name, price }) => {
+      const item = new Item({ name, price });
       await item.save();
       return item;
     },
